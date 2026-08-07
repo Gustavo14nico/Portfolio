@@ -1,3 +1,5 @@
+import profileImage from "../../image/Retrato Corporativo Profissional.png";
+
 export function About() {
   return (
     <section
@@ -37,16 +39,22 @@ export function About() {
             </h2>
 
             <p className="mt-6 text-base leading-7 text-slate-400 lg:text-lg lg:leading-8">
-              texto1
+              Desenvolvedor de software apaixonado por criar experiências digitais de qualidade.
             </p>
 
             <p className="mt-6 text-base leading-7 text-slate-400 lg:text-lg lg:leading-8">
-              texto2
+              Atualmente trabalho com desenvolvimento de jogos educacionais em Unity e C#, enquanto aprofundo meus
+              conhecimentos em desenvolvimento Full Stack utilizando React, TypeScript, Node.js e Laravel. Acredito
+              que aprender continuamente, escrever código limpo e buscar soluções eficientes são os pilares para construir
+              produtos de qualidade.
+            </p>
+            <p className="mt-6 text-base leading-7 text-slate-400 lg:text-lg lg:leading-8">
+              Estou sempre em busca de novos desafios e oportunidades para evoluir como desenvolvedor.
             </p>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+            {/* <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
 
-              {["React", "TypeScript", "Unity", "C#"].map((tech) => (
+              {["React", "TypeScript", "Unity", "C#", "Node.js", "Laravel"].map((tech) => (
                 <span
                   key={tech}
                   className="rounded-full bg-blue-600/20 px-4 py-2 text-sm text-blue-400"
@@ -55,7 +63,7 @@ export function About() {
                 </span>
               ))}
 
-            </div>
+            </div> */}
 
           </div>
 
@@ -84,7 +92,11 @@ export function About() {
               "
             >
               <span className="text-slate-500">
-                Sua Foto
+                <img
+                  src={profileImage}
+                  alt="Foto de perfil"
+                  className="h-full w-full rounded-full object-cover"
+                />
               </span>
             </div>
 
@@ -93,6 +105,7 @@ export function About() {
         </div>
 
       </div>
-    </section>
+
+    </section >
   );
 }
