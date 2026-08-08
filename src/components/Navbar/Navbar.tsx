@@ -42,7 +42,7 @@ export function Navbar() {
           href="#home"
           className="text-2xl font-bold text-white"
         >
-          Gustavo de Assis
+          Bync Studios
         </a>
 
         {/* Desktop */}

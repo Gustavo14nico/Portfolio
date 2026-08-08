@@ -1,4 +1,4 @@
-import profileImage from "../../image/Retrato Corporativo Profissional.png";
+import profileImage from "../../assets/image/Retrato Corporativo Profissional.png";
 
 export function About() {
   return (
@@ -91,13 +91,16 @@ export function About() {
                 lg:w-96
               "
             >
-              <span className="text-slate-500">
-                <img
-                  src={profileImage}
-                  alt="Foto de perfil"
-                  className="h-full w-full rounded-full object-cover"
-                />
-              </span>
+              <div className="h-56 w-56 overflow-hidden rounded-full sm:h-100 sm:w-100 lg:h-94 lg:w-94">
+                <span className="text-slate-500">
+                  <img
+                    src={profileImage}
+                    alt="Foto de perfil"
+                    className="h-full w-full rounded-full object-cover"
+                  />
+                </span>
+              </div>
+
             </div>
 
           </div>
