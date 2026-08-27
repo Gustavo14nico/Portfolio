@@ -16,7 +16,7 @@ export function Hero() {
 
             <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center justify-center px-6">
                 <div className="max-w-3xl text-center">
-                    <p className="mb-4 text-lg font-medium text-blue-400">Olá, eu sou 👋</p>
+                    <p className="mb-4 text-lg font-medium text-blue-400">Olá, eu me chamo</p>
 
                     <h1 className="mb-4 text-5xl font-bold text-white sm:text-6xl lg:text-7xl">
                         {name}
