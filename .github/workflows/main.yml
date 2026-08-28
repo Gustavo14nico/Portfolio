@@ -1,4 +1,4 @@
-name: 🚀 Deploy Site (Hostinger)
+name: 🚀 Deploy Site - Hostinger
 
 on:
   push:
@@ -7,26 +7,38 @@ on:
 
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: 🎉 Build and Deploy
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Baixar o código
+      # 1. Baixar o código do GitHub
       - name: 🚚 Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Enviar arquivos para a Hostinger
+      # 2. Configurar Node.js
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # 3. Instalar dependências
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      # 4. Gerar os arquivos de produção
+      - name: 🏗️ Build project
+        run: npm run build
+
+      # 5. Enviar somente o build para a Hostinger
       - name: 📂 Deploy files to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_SENHA }}
-          local-dir: ./
+          local-dir: ./dist/
           server-dir: /public_html/Personal_portifolio/
           exclude: |
             **/.git*
             **/.github/**
-            **/node_modules/**
-            **/scss/**
-            **/Readme.txt
