@@ -23,7 +23,7 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_SENHA }}
           local-dir: ./
-          server-dir: /public_html/Personal_portifolio
+          server-dir: /public_html/Personal_portifolio/
           exclude: |
             **/.git*
             **/.github/**
