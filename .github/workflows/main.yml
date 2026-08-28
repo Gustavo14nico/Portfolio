@@ -1,0 +1,32 @@
+name: 🚀 Deploy Site (Hostinger)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Baixar o código
+      - name: 🚚 Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Enviar arquivos para a Hostinger
+      - name: 📂 Deploy files to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_SENHA }}s
+          local-dir: ./
+          server-dir: /public_html/Personal_portifolio
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/scss/**
+            **/Readme.txt
