@@ -21,7 +21,7 @@ jobs:
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_SENHA }}s
+          password: ${{ secrets.FTP_SENHA }}
           local-dir: ./
           server-dir: /public_html/Personal_portifolio
           exclude: |
