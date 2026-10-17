@@ -5,16 +5,17 @@ import {Footer} from "../components/Footer/Footer";
 import {Contact} from "../components/Contact/Contact"
 import {Skills} from "../components/Skills/Skills"
 import {Projects} from "../components/Projects/Projects"
+import {Reveal} from "../components/Reveal/Reveal"
 
 export function Home(){
     return(
     <>
         <Navbar/>
         <Hero/>
-        <About/>
-        <Skills/>
-        <Projects/>
-        <Contact/>
+        <Reveal><About/></Reveal>
+        <Reveal><Skills/></Reveal>
+        <Reveal><Projects/></Reveal>
+        <Reveal><Contact/></Reveal>
         <Footer/>
     </>
     )

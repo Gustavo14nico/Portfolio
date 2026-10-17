@@ -43,16 +43,16 @@ export function Projects() {
     return (
         <section
             id="projects"
-            className="bg-slate-900 py-24"
+            className="py-24"
         >
             <div className="mx-auto max-w-6xl px-6">
 
                 {/* Container */}
-                <div className="rounded-3xl border border-slate-700 bg-slate-800 p-12">
+                <div className="glass rounded-3xl p-6 md:p-12">
 
                     {/* Título */}
                     <div className="mb-16 text-center">
-                        <span className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+                        <span className="text-sm font-semibold font-mono uppercase tracking-[0.3em] text-cyan-300">
                             Projetos
                         </span>
                     </div>
@@ -63,7 +63,7 @@ export function Projects() {
                         {projects.map((project) => (
                             <div
                                 key={project.title}
-                                className="group overflow-hidden rounded-2xl border border-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10"
+                                className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-400/10"
                             >
 
                                 <div className="grid items-center gap-8 md:grid-cols-[0.8fr_1.2fr]">
@@ -98,7 +98,7 @@ export function Projects() {
                                                 {project.technologies.map((tech) => (
                                                     <span
                                                         key={tech}
-                                                        className="rounded-full border border-blue-500/20 bg-blue-600/15 px-4 py-2 text-sm text-blue-300"
+                                                        className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200"
                                                     >
                                                         {tech}
                                                     </span>
@@ -115,7 +115,7 @@ export function Projects() {
                                                 href={project.github}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="rounded-xl border border-blue-500 px-5 py-2 text-blue-400 transition hover:bg-blue-500 hover:text-white"
+                                                className="rounded-xl border border-cyan-400/60 px-5 py-2 text-cyan-300 transition hover:bg-cyan-400 hover:text-slate-950"
                                             >
                                                 GitHub
                                             </a>
@@ -126,7 +126,7 @@ export function Projects() {
                                                     e.preventDefault();
                                                     setSelectedProject(project);
                                                 }}
-                                                className="rounded-xl bg-blue-500 px-5 py-2 text-white transition hover:bg-blue-600"
+                                                className="rounded-xl bg-gradient-to-r from-cyan-400 to-violet-500 px-5 py-2 font-medium text-slate-950 transition hover:opacity-90"
                                             >
                                                 Ver Projeto
                                             </button>
@@ -157,7 +157,7 @@ export function Projects() {
                 >
 
                     <div
-                        className="relative z-[10000] max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-3xl border border-slate-700 bg-slate-800 shadow-2xl"
+                        className="relative z-[10000] max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-3xl border border-white/10 bg-[#0a0f1c] shadow-2xl shadow-cyan-500/10"
                         onClick={(e) => e.stopPropagation()}
                     >
 
@@ -165,14 +165,14 @@ export function Projects() {
                         <button
                             type="button"
                             onClick={() => setSelectedProject(null)}
-                            className="absolute right-5 top-5 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/80 text-xl text-slate-300 transition hover:bg-blue-500 hover:text-white"
+                            className="absolute right-5 top-5 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-xl text-slate-300 transition hover:bg-cyan-400 hover:text-slate-950"
                             aria-label="Fechar"
                         >
                             ×
                         </button>
 
                         {/* Imagem */}
-                        <div className="flex h-64 items-center justify-center bg-slate-900 p-8">
+                        <div className="flex h-64 items-center justify-center bg-black/30 p-8">
 
                             <img
                                 src={selectedProject.image}
@@ -185,7 +185,7 @@ export function Projects() {
                         {/* Conteúdo */}
                         <div className="p-8 md:p-10">
 
-                            <span className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+                            <span className="text-sm font-semibold font-mono uppercase tracking-[0.3em] text-cyan-300">
                                 Projeto
                             </span>
 
@@ -218,7 +218,7 @@ export function Projects() {
                                     {selectedProject.technologies.map((tech) => (
                                         <span
                                             key={tech}
-                                            className="rounded-full border border-blue-500/20 bg-blue-600/15 px-4 py-2 text-sm text-blue-300"
+                                            className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200"
                                         >
                                             {tech}
                                         </span>
@@ -242,7 +242,7 @@ export function Projects() {
                                             key={feature}
                                             className="flex items-center gap-3 text-slate-400"
                                         >
-                                            <span className="h-2 w-2 rounded-full bg-blue-500" />
+                                            <span className="h-2 w-2 rounded-full bg-cyan-400" />
 
                                             {feature}
                                         </li>
@@ -259,14 +259,14 @@ export function Projects() {
                                     href={selectedProject.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="rounded-xl border border-blue-500 px-6 py-3 text-blue-400 transition hover:bg-blue-500 hover:text-white"
+                                    className="rounded-xl border border-cyan-400/60 px-6 py-3 text-cyan-300 transition hover:bg-cyan-400 hover:text-slate-950"
                                 >
                                     Ver no GitHub
                                 </a>
 
                                 <button
                                     onClick={() => setSelectedProject(null)}
-                                    className="rounded-xl bg-blue-500 px-6 py-3 text-white transition hover:bg-blue-600"
+                                    className="rounded-xl bg-gradient-to-r from-cyan-400 to-violet-500 px-6 py-3 font-medium text-slate-950 transition hover:opacity-90"
                                 >
                                     Fechar
                                 </button>

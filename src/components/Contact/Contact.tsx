@@ -2,14 +2,14 @@ import { SocialCard } from "./SocialCard";
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-slate-900 py-16 md:py-24">
+    <section id="contact" className="py-16 md:py-24">
       <div className="mx-auto max-w-5xl px-6 md:px-8">
 
-        <div className="rounded-3xl border border-slate-700 bg-slate-800 p-6 shadow-2xl md:p-12">
+        <div className="glass rounded-3xl p-6 md:p-12">
 
           <div className="text-center">
 
-            <span className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+            <span className="text-sm font-semibold font-mono uppercase tracking-[0.3em] text-cyan-300">
               Contato
             </span>
 

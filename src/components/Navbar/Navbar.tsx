@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const links = [
-  { id: "home", label: "Inicio"},
+  { id: "home", label: "Início"},
   { id: "about", label: "Sobre mim" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projetos" },
@@ -35,14 +35,14 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#04060d]/70 backdrop-blur-xl">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
 
         <a
           href="#home"
-          className="text-2xl font-bold text-white"
+          className="font-mono text-xl font-bold tracking-tight text-white"
         >
-          Bync Studios
+          <span className="text-cyan-300">&lt;</span>Bync Studios<span className="text-cyan-300"> /&gt;</span>
         </a>
 
         {/* Desktop */}
@@ -54,14 +54,14 @@ export function Navbar() {
                 href={`#${link.id}`}
                 className={`relative transition duration-300 ${
                   activeSection === link.id
-                    ? "text-blue-400"
-                    : "text-slate-300 hover:text-blue-400"
+                    ? "text-cyan-300"
+                    : "text-slate-300 hover:text-cyan-300"
                 }`}
               >
                 {link.label}
 
                 <span
-                  className={`absolute -bottom-2 left-0 h-[2px] bg-blue-400 transition-all duration-300 ${
+                  className={`absolute -bottom-2 left-0 h-[2px] bg-gradient-to-r from-cyan-300 to-violet-400 transition-all duration-300 ${
                     activeSection === link.id ? "w-full" : "w-0"
                   }`}
                 />
@@ -74,6 +74,8 @@ export function Navbar() {
         {/* Mobile */}
         <button
           className="text-white md:hidden"
+          aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <HiX size={32} /> : <HiMenu size={32} />}
@@ -82,7 +84,7 @@ export function Navbar() {
 
       {/* Menu Mobile */}
       <div
-        className={`overflow-hidden bg-slate-900 transition-all duration-300 md:hidden ${
+        className={`overflow-hidden bg-[#04060d]/95 transition-all duration-300 md:hidden ${
           menuOpen ? "max-h-96" : "max-h-0"
         }`}
       >
@@ -93,8 +95,8 @@ export function Navbar() {
             onClick={() => setMenuOpen(false)}
             className={`block px-6 py-4 transition ${
               activeSection === link.id
-                ? "bg-slate-800 text-blue-400"
-                : "text-slate-300 hover:bg-slate-800 hover:text-blue-400"
+                ? "bg-white/5 text-cyan-300"
+                : "text-slate-300 hover:bg-white/5 hover:text-cyan-300"
             }`}
           >
             {link.label}

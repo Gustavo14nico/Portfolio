@@ -4,7 +4,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="bg-slate-900 py-16 md:py-24"
+      className="py-16 md:py-24"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -16,9 +16,7 @@ export function About() {
             gap-12
 
             rounded-3xl
-            border
-            border-slate-700
-            bg-slate-800
+            glass
             p-8
             shadow-2xl
 
@@ -30,7 +28,7 @@ export function About() {
           {/* Texto */}
           <div className="flex-1 text-center lg:text-left">
 
-            <span className="font-semibold uppercase tracking-[0.3em] text-blue-400">
+            <span className="font-semibold font-mono uppercase tracking-[0.3em] text-cyan-300">
               Sobre Mim
             </span>
 
@@ -78,11 +76,7 @@ export function About() {
                 items-center
                 justify-center
                 rounded-full
-                border-2
-                border-dashed
-                border-blue-500
-                bg-slate-900
-                shadow-xl
+                border border-cyan-400/40 bg-[#04060d] shadow-[0_0_60px_-10px_rgb(34_211_238/0.5)]
 
                 sm:h-72
                 sm:w-72

@@ -2,7 +2,7 @@ import { socialLinks } from "../../data/socialLinks";
 
 export function SocialCard() {
   return (
-    <div className="grid grid-cols-2 gap-4 md:gap-6">
+    <div className="flex flex-wrap justify-center gap-4 md:gap-6">
 
       {socialLinks.map((social) => {
 
@@ -14,57 +14,12 @@ export function SocialCard() {
             href={social.href}
             target="_blank"
             rel="noreferrer"
-            className={`
-              group
-              flex
-              h-24
-              w-24
-              items-center
-              justify-center
-
-              sm:h-28
-              sm:w-28
-
-              md:h-[120px]
-              md:w-[120px]
-
-              border-[3px]
-              border-[#2d2d2d]
-
-              bg-black
-
-              shadow-[4px_4px_0px_#2d2d2d]
-              md:shadow-[6px_6px_0px_#2d2d2d]
-
-              transition-all
-              duration-200
-
-              hover:-translate-x-1
-              hover:-translate-y-1
-
-              md:hover:-translate-x-[6px]
-              md:hover:-translate-y-[6px]
-
-              hover:shadow-[8px_8px_0px_#2d2d2d]
-              md:hover:shadow-[12px_12px_0px_#2d2d2d]
-
-              ${social.rounded}
-              ${social.padding}
-              ${social.hoverColor}
-            `}
+            aria-label={social.label}
+            className="group flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400/50 hover:bg-cyan-400/10 hover:shadow-[0_0_35px_-5px_rgb(34_211_238/0.5)] md:h-24 md:w-24"
           >
             <Icon
               className={`
-                text-4xl
-                sm:text-5xl
-                md:text-[60px]
-
-                transition-colors
-                duration-200
-
-                group-hover:text-white
-
-                ${social.iconColor}
+                text-3xl transition-transform duration-300 group-hover:scale-110 md:text-4xl ${social.iconColor}
               `}
             />
           </a>

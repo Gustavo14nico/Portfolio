@@ -1,15 +1,17 @@
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedin,
   FaWhatsapp,
 } from "react-icons/fa";
 
+import { MdOutlineMail } from "react-icons/md"
+
 export const socialLinks = [
   {
     id: 1,
-    icon: FaInstagram,
-    // href: "https://instagram.com/",
+    label: "E-mail",
+    icon: MdOutlineMail,
+    href: "mailto:gustavo@byncstudios.com?subject=Contato%20pelo%20portf%C3%B3lio",
     iconColor: "text-pink-600",
     hoverColor: "hover:bg-[#fd1d1d]",
     rounded: "rounded-[90px_5px_5px_5px]",
@@ -17,6 +19,7 @@ export const socialLinks = [
   },
   {
     id: 2,
+    label: "LinkedIn",
     icon: FaLinkedin,
     href: "https://www.linkedin.com/in/gustavo-de-assis-06581928a/",
     iconColor: "text-[#24A0ED]",
@@ -26,6 +29,7 @@ export const socialLinks = [
   },
   {
     id: 3,
+    label: "GitHub",
     icon: FaGithub,
     href: "https://github.com/Gustavo14nico",
     iconColor: "text-[#ffffff]",
@@ -35,6 +39,7 @@ export const socialLinks = [
   },
   {
     id: 4,
+    label: "WhatsApp",
     icon: FaWhatsapp,
     href: "https://wa.me/5518997423902",
     iconColor: "text-[#00A849]",
